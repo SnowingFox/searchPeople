@@ -13,9 +13,12 @@
 ---
 
 # 使用的模型库
-#### haarcascade_frontalface_default.xml #### 人脸识别模型
-#### MobileNetSSD_deploy.prototxt #### 行人识别模型
-#### MobileNetSSD_deploy10695.caffemodel #### 行人识别模型
+#### 人脸识别模型
+#### haarcascade_frontalface_default.xml 
+#### 行人识别模型
+#### MobileNetSSD_deploy.prototxt 
+#### 行人识别模型
+#### MobileNetSSD_deploy10695.caffemodel 
 
 ***
 ----
