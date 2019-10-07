@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 import argparse
-net = cv2.dnn.readNetFromCaffe("model/model/MobileNetSSD_deploy.prototxt",
-                               "model/model/MobileNetSSD_deploy10695.caffemodel")
+net = cv2.dnn.readNetFromCaffe("MobileNetSSD_deploy.prototxt",
+                               "MobileNetSSD_deploy10695.caffemodel")
 
 blub = False    #默认红灯 False->红灯 True->绿灯
 #获取人脸
