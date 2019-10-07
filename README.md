@@ -1,4 +1,4 @@
-# searchPeople行人搜寻系统
+# searchPeople[行人搜寻]
 
 ## 基于Python+OpenCV+Numpy+深度学习得到的行人识别模型+深度学习得到的人脸识别模型
 
