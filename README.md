@@ -12,7 +12,14 @@
 ----
 ---
 
-#使用的模型库
-#### haarcascade_frontalface_default.xml ####人脸识别模型
-#### MobileNetSSD_deploy.prototxt ####行人识别模型
-#### MobileNetSSD_deploy10695.caffemodel ####行人识别模型
+# 使用的模型库
+#### haarcascade_frontalface_default.xml #### 人脸识别模型
+#### MobileNetSSD_deploy.prototxt #### 行人识别模型
+#### MobileNetSSD_deploy10695.caffemodel #### 行人识别模型
+
+***
+----
+---
+# 关于帧率
+#### 在识别图片的情况下FPS约为70ms/帧
+#### 在视频识别的情况下个人认为取决于电脑配置
