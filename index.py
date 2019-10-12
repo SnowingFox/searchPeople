@@ -1,14 +1,15 @@
+#引入库
 import cv2
 import numpy as np
 import argparse
 net = cv2.dnn.readNetFromCaffe("MobileNetSSD_deploy.prototxt",
                                "MobileNetSSD_deploy10695.caffemodel")
+face_xml = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 blub = False    #默认红灯 False->红灯 True->绿灯
 #获取人脸
-def getFace(filename):   
-    face_xml = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-    img = cv2.imread(filename,1)
+def getFace(img,startX,startY,endX,endY):
+    shape = img.shape
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     faces = face_xml.detectMultiScale(gray,1.3,5)
     #print('face=',len(faces))
@@ -19,13 +20,8 @@ def getFace(filename):
     for (x,y,w,h) in faces:
         cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
         roi_face = gray[y:y+h,x:x+w]
-        roi_color = img[y:y+h,x:x+w]
-        outname = str(index)+'.jpg'
-        cv2.imwrite(outname,roi_color)
-        index = index + 1
-        img = cv2.imread(outname,1)
-        cv2.imshow('dst',img)
-        cv2.waitKey(0)
+        roi_color = img[y:y+h,x:x+w]   
+
 #绘制人脸
 def draw_person(img, persont):
     x,y,w,h = persont
